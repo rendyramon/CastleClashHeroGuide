@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Castle Clash Hero Guide</string>
+    <string name="welcome">Welcome</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+    <string name="menu_sacrifice">Sacrifice</string>
+    <string name="menu_ordinary">Ordinary</string>
+    <string name="menu_elite">Elite</string>
+    <string name="menu_legendary">Legendary</string>
+    <string name="menu_sacrifice_sub">Sacrifice Heroes are heroes that are used (consumed) to increase other Heroes\' skill levels. They cannot be used in battles or for Tower Garrison purposes.</string>
+    <string name="menu_ordinary_sub">Ordinary Heroes have the lowest stats, but are inexpensive and therefore good for beginners. They introduce the player into the game, but are not especially strong.</string>
+    <string name="menu_elite_sub">Elite Heroes have mediocre stats. However, a few of them are on par with the lesser Legendary Heroes.</string>
+    <string name="menu_legendary_sub">Legendary Heroes generally have the highest stats and are among the strongest of all Heroes. Some of them can only be obtained by Gem rolls (i.e. Pumpkin Duke, Snowzilla, Cupid, Aries, Vlad Dracula, Orksbane, Santa Boom, Pixie, Death Knight) or by in-game purchases (Spirit Mage, Minotaur Chieftain, Destroyer).</string>
+    <string name="about_title">About</string>
+    <string name="about_content">...</string>
+    <string name="title_activity_category">Category</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
