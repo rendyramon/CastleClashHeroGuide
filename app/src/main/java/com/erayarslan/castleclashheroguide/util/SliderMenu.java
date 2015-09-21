@@ -1,8 +1,10 @@
 package com.erayarslan.castleclashheroguide.util;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
@@ -33,12 +35,16 @@ public class SliderMenu {
     private TextView mUsername;
     private RelativeLayout mProfileBox;
 
+    private AdManager adManager;
+
     private ArrayList<NavItem> mNavItems = new ArrayList<NavItem>();
 
     public SliderMenu(Activity activity) {
         this.activity = activity;
+        adManager = new AdManager(activity);
     }
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public ActionBarDrawerToggle doMenu() {
         activity.getActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -78,17 +84,20 @@ public class SliderMenu {
                 } else if (mNavItems.get(position).mTitle.equalsIgnoreCase(activity.getString(R.string.menu_legendary))) {
                     doIt(activity.getString(R.string.menu_legendary));
                 }
+                adManager.show();
                 mDrawerLayout.closeDrawer(mDrawerPane);
             }
         });
 
         mDrawerToggle = new ActionBarDrawerToggle(activity, mDrawerLayout, R.drawable.ic_navigation_drawer, R.string.drawer_open, R.string.drawer_close) {
+            @TargetApi(Build.VERSION_CODES.HONEYCOMB)
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
                 activity.invalidateOptionsMenu();
             }
 
+            @TargetApi(Build.VERSION_CODES.HONEYCOMB)
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
